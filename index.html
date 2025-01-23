@@ -7,7 +7,18 @@
 </head>
 <body>
     <h1>Detalization Request</h1>
-    <form action="https://moskva.beeline.ru/api/sso/set-request-enabled" method="POST" enctype="application/json">
+    <form action="https://moskva.beeline.ru/api/profile/detalization/createdetailperiodicrequest/" method="POST" enctype="application/json">
+        <label for="startDate">Start Date:</label>
+        <input type="number" id="startDate" name="startDate" value="1" required>
+
+        <label for="reportType">Report Type:</label>
+        <select id="reportType" name="reportType" required>
+            <option value="Pdf" selected>PDF</option>
+        </select>
+
+        <label for="numbers">Phone Numbers (comma-separated):</label>
+        <input type="text" id="numbers" name="numbers" value="9099240026" required>
+
         <button type="submit">Send Request</button>
     </form>
 </body>
