@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalization Request Form</title>
+</head>
+<body>
+    <h1>Detalization Request</h1>
+    <form action="https://moskva.beeline.ru/api/profile/detalization/detalizationrequest/" method="POST">
+        <label for="isEmailSend">Is Email Send:</label>
+        <input type="hidden" name="isEmailSend" value="false">
+
+        <label for="periodStart">Period Start:</label>
+        <input type="date" id="periodStart" name="periodStart" value="2025-01-23" required>
+
+        <label for="periodEnd">Period End:</label>
+        <input type="date" id="periodEnd" name="periodEnd" value="2025-01-23" required>
+
+        <label for="reportType">Report Type:</label>
+        <select id="reportType" name="reportType" required>
+            <option value="pdf" selected>PDF</option>
+            <option value="xls">XLS</option>
+        </select>
+
+        <button type="submit">Send Request</button>
+    </form>
+</body>
+</html>
